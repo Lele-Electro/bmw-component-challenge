@@ -1,0 +1,39 @@
+
+   @import '/src/styles.less';
+   span{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 5px;
+        height:40px;
+        width:40px;
+        position: relative;
+        display: inline-block;
+        background-color: @bmw-grey-4;
+        cursor: pointer;
+        border-bottom: 2px transparent solid;
+        // z-index: 5;
+        // background-image: url('/assets/icons/car-front_rg.svg');
+        svg{
+            position: relative;
+            display: block;
+            fill: red;
+            z-index: 4;
+            height: 100%;
+            width: 100%;
+
+            path{
+                fill: @bmw-grey-7-30-opacity;
+            }
+        }
+    }
+
+    .optionSelected{
+        border-bottom: 2px @bmw-blue-1 solid;
+
+        svg{
+            path{
+                fill: @bmw-anthracite;
+            }
+        }
+
+    }

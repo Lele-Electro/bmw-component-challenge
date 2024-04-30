@@ -1,0 +1,5 @@
+<button [ngClass]="{'callToAction-button': buttonData.type === 'callToAction',
+        'standard-button': buttonData.type === 'standard'}">
+      <span *ngIf="buttonData.icon"> <img [src]= returnFilePath() alt=""></span>
+    {{buttonData.text}}
+</button>
