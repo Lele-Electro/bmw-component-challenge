@@ -45,9 +45,9 @@ More Specifications</h3>
             <div class="pricing-info">
 
                 <div class="price-info-row"><p>Per Month</p></div>
-                <div class="price-info-row"><h2> {{vehicle.pricing.MonthlyInstallment | currency: 'R ' : 'symbol' : '1.0-0' }}</h2></div>
+                <div class="price-info-row"><h2> {{vehicle.pricing.MonthlyInstallment | customCurrency }}</h2></div>
                 <div class="price-info-row" ><p>Offer Price</p></div>
-                <div class="price-info-row"><h3> {{vehicle.pricing.MonthlyInstallment | currency: 'R ' : 'symbol' : '1.0-0' }}</h3></div>
+                <div class="price-info-row"><h3> {{vehicle.pricing.MonthlyInstallment | customCurrency }}</h3></div>
 
                 <div class="price-info-row">
                     <p><span class="col-md-2"> <img class="small-icon" src="/assets/icons/calculator_rg.svg" alt=""></span>Email Quote</p>

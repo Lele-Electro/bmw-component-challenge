@@ -4,6 +4,7 @@ import { InteriorExteriorButtonComponent } from '../interior-exterior-button/int
 import { BmwButtonComponent } from '../bmw-button/bmw-button.component';
 import { button } from 'src/app/models/button-model';
 import { CurrencyPipe } from '@angular/common';
+import { CustomCurrencyPipe } from 'src/app/pipes/custom-currency.pipe';
 
 @Component({
   selector: 'app-vehicle-details-component',
@@ -13,7 +14,9 @@ import { CurrencyPipe } from '@angular/common';
   imports : [
     InteriorExteriorButtonComponent,
     BmwButtonComponent,
-    CurrencyPipe
+    CurrencyPipe,
+    CustomCurrencyPipe
+
   ]
 })
 export class VehicleDetailsComponentComponent implements OnInit {
