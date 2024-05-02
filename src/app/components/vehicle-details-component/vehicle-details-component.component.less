@@ -30,15 +30,32 @@
     justify-content: center;
     background-color: @bmw-grey-8;
 
+
     .price-info-row:nth-of-type(even) {
         text-align: end;
     }
+
+    .price-info-row:nth-of-type(5) p,
+    .price-info-row:nth-of-type(6) p {
+        font-family: bmwTypeNext_bold !important;
+        text-decoration: underline;
+
+
+    }
+
+
 }
 
-.small-icon {
-    height: 16px !important;
-    margin-right: 4px;
+.material-symbols-outlined {
+    margin: 0;
+    padding: 0;
+    width: 14px;
+    font-size: 16px !important;
+    height: 14px;
+    line-height: 14px;
+    margin-right: 5px;
 }
+
 
 .info-row-3 {
     p {
@@ -87,7 +104,7 @@ app-interior-exterior-button {
     .image-container {
         margin-top: 40px;
         background-color: @bmw-grey-8;
-        background-image: url('../../../assets/images/models/bmw220i.png');
+        // background-image: url('../../../assets/images/models/bmw220i.png');
         background-size: 100%;
         background-repeat: no-repeat;
         background-position-y: -5px;
@@ -127,11 +144,6 @@ app-interior-exterior-button {
         height: 100%;
         // margin-top: 15px;
 
-        p {
-            margin: 0;
-            padding: 0;
-            font-family: bmwTypeNext_bold;
-        }
 
 
 
@@ -175,6 +187,22 @@ app-interior-exterior-button {
     height: 100%;
 
     .spec-block {
+        padding: 10px;
+
+         p {
+
+            // padding: 0;
+            // font-family: bmwTypeNext_bold;
+            // text-align: left !important;
+            // margin-left: 10px;
+        }
+
+
+        span{
+            font-size: 14px;
+        }
+
+
         grid-row-start: 1;
         grid-row-end: 2;
     }
@@ -186,9 +214,6 @@ app-interior-exterior-button {
 
         h3 {
             font-size: 18px !important;
-        }
-        span{
-            // margin-top: 20px;
         }
 
         grid-column-start: 1;
@@ -222,4 +247,52 @@ app-interior-exterior-button {
     // border: black solid 1px;
 }
 
-.header-row {}
+@media only screen and (max-width: 768px) {
+
+    .vehicle-component-container {
+        width: 100%
+    }
+
+    .component-left,
+    .component-right {
+        height: fit-content;
+    }
+
+
+    .header-row {
+        display: grid;
+        grid-template-columns: 11fr 1fr;
+    }
+
+
+
+
+    .left-top-half {
+        box-sizing: border-box;
+        // width: 100%;
+        display: grid;
+        position: relative;
+        z-index: 2;
+        overflow: visible;
+
+        .image-container {
+            // margin-top: 40px;
+            background-color: @bmw-grey-8;
+            background-image: url('../../../assets/images/models/bmw220i.png');
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position-y: center;
+            background-position-x: center;
+            height: 100%;
+            width: 100%;
+            position: relative;
+            align-self: end;
+            justify-self: center;
+        }
+
+
+
+
+    }
+
+}

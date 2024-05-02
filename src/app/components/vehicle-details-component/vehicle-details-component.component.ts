@@ -5,6 +5,7 @@ import { BmwButtonComponent } from '../bmw-button/bmw-button.component';
 import { button } from 'src/app/models/button-model';
 import { CurrencyPipe } from '@angular/common';
 import { CustomCurrencyPipe } from 'src/app/pipes/custom-currency.pipe';
+import { EmailQuoteIconComponent } from '../email-quote-icon/email-quote-icon.component';
 
 @Component({
   selector: 'app-vehicle-details-component',
@@ -15,7 +16,8 @@ import { CustomCurrencyPipe } from 'src/app/pipes/custom-currency.pipe';
     InteriorExteriorButtonComponent,
     BmwButtonComponent,
     CurrencyPipe,
-    CustomCurrencyPipe
+    CustomCurrencyPipe,
+    EmailQuoteIconComponent
 
   ]
 })
@@ -30,24 +32,6 @@ export class VehicleDetailsComponentComponent implements OnInit {
   buttonOne!: button
   buttonTwo!: button
   constructor() {}
-
-  returnModelImageFilePath(){
-    const fileFolder = '/assets/images/models/'
-    const fileExtension = '.png'
-    const imageName = this.vehicle.modelName.replace(/\s/g, '').toLocaleLowerCase();
-    return fileFolder + imageName + fileExtension
-  }
-
-  returnBackgroundImage(){
-    const fileFolder = '/assets/images/models/'
-    const fileExtension = '.png'
-    const imageName = this.vehicle.modelName.replace(/\s/g, '').toLocaleLowerCase();
-    console.log("background-image: " + "url('"  + fileFolder + imageName + fileExtension + "')")
-    return "background-image: " + "url('"  + fileFolder + imageName + fileExtension + "')"
-
-
-  }
-
   instantiateComponentsButtons(){
     this.buttonOne = {
       icon: {iconType: 'add'},
@@ -60,6 +44,17 @@ export class VehicleDetailsComponentComponent implements OnInit {
       text: 'View Vehicle',
       type: 'callToAction',
     }
+  }
+
+  returnModel(){
+    const fileFolder = '../../../assets/images/models/';
+    const fileExtension = '.png';
+    const imageName = this.vehicle.modelName.replace(/\s/g, '').toLocaleLowerCase();
+
+    return `background-image: url( ${fileFolder + imageName + fileExtension}) `
+
+    // "background-image: url('../../../assets/images/models/bmw220i.png') ;"
+    return
   }
 
 }

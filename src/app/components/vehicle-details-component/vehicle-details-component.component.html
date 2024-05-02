@@ -11,69 +11,84 @@
                     <span> <img src="/assets/icons/seat-side_rg.svg"></span>
 
                 </div> -->
-                <div class="image-container"></div>
+                <div class="image-container" [style]="returnModel()"></div>
 
             </div>
             <div class="left-bottom-half">
 
-    <div class="spec-block"><h3>{{vehicle.TechnicalSpecs.Zeroto100}}<span>sec</span><p>0-100km/h</p></h3></div>
-    <div class="spec-block"><h3>{{vehicle.TechnicalSpecs.EnginePerfomance}}<span>kW</span><p>Engine Performance</p></h3></div>
-    <div class="spec-block"><h3>{{vehicle.TechnicalSpecs.FuelConsumption}}<span>l/100km</span><p>Fuel Consumption (combined)</p></h3></div>
+                <div class="spec-block">
+                    <h3>{{vehicle.TechnicalSpecs.Zeroto100}}<span>sec</span>
+                        <p>0-100km/h</p>
+                    </h3>
+                </div>
+                <div class="spec-block">
+                    <h3>{{vehicle.TechnicalSpecs.EnginePerfomance}}<span>kW</span>
+                        <p>Engine Performance</p>
+                    </h3>
+                </div>
+                <div class="spec-block">
+                    <h3>{{vehicle.TechnicalSpecs.FuelConsumption}}<span>l/100km</span>
+                        <p>Fuel Consumption (combined)</p>
+                    </h3>
+                </div>
 
                 <div class="more-spec-container">
                     <h3>
-<span class="material-symbols-outlined">
-expand_less
-</span>
-More Specifications</h3>
+                        <span class="material-symbols-outlined">
+                            expand_less
+                        </span>
+                        More Specifications
+                    </h3>
                 </div>
             </div>
         </div>
         <div class="component-right col-md-5">
             <!-- HEADER -->
-            <div  class="header-row row">
-                <h2 class="col-md-10">{{vehicle.modelName}}<span><h5>{{vehicle.BodyType}}</h5></span></h2>
+            <div class="header-row row">
+                <h2 class="col-md-10">{{vehicle.modelName}}<span>
+                        <h5>{{vehicle.BodyType}}</h5>
+                    </span></h2>
                 <span class="col-md-2"> <img src="/assets/icons/heart_rg.svg" alt=""></span>
             </div>
-            <div class="specs ">
-                <div class="spec-block"><p>{{vehicle.NewDemo}}</p></div>
-                <div class="spec-block"><p>{{vehicle.FuelType}}</p></div>
-                <div class="spec-block"><p>{{vehicle.Transmition}}</p></div>
+            <div class="specs">
+                <div class="spec-block">
+                    <p>{{vehicle.NewDemo}}</p>
+                </div>
+                <div class="spec-block">
+                    <p>{{vehicle.FuelType}}</p>
+                </div>
+                <div class="spec-block">
+                    <p>{{vehicle.Transmition}}</p>
+                </div>
             </div>
             <p class="delivery-text  m-1">Delivery within 1 week</p>
 
             <div class="pricing-info">
 
-                <div class="price-info-row"><p>Per Month</p></div>
-                <div class="price-info-row"><h2> {{vehicle.pricing.MonthlyInstallment | customCurrency }}</h2></div>
-                <div class="price-info-row" ><p>Offer Price</p></div>
-                <div class="price-info-row"><h3> {{vehicle.pricing.MonthlyInstallment | customCurrency }}</h3></div>
-
                 <div class="price-info-row">
-                    <p><span class="col-md-2"> <img class="small-icon" src="/assets/icons/calculator_rg.svg" alt=""></span>Email Quote</p>
+                    <p>Per Month</p>
+                </div>
+                <div class="price-info-row">
+                    <h2> {{vehicle.pricing.MonthlyInstallment | customCurrency }}</h2>
+                </div>
+                <div class="price-info-row">
+                    <p>Offer Price</p>
+                </div>
+                <div class="price-info-row">
+                    <h3> {{vehicle.pricing.MonthlyInstallment | customCurrency }}</h3>
                 </div>
 
                 <div class="price-info-row">
-                    <p><span class="col-md-2"> <img class="small-icon" src="/assets/icons/calculator_rg.svg" alt=""></span>Payment Options</p>
+                    <p><span class="material-symbols-outlined"> description </span> Email Quote</p>
                 </div>
 
-
+                <div class="price-info-row">
+                    <p><span class="col-md-2"><app-email-quote-icon></app-email-quote-icon></span>Payment Options</p>
+                </div>
             </div>
-
-            <!-- <div class="info-row row-1">
-
-            </div>
-            <div class="info-row">
-
-            </div>
-
-            <div class="info-row-3">
-                <p>Regular Text</p>
-                <p>Regular Text</p>
-            </div> -->
             <div class="row">
                 <app-bmw-button [buttonData]="this.buttonOne" class="col-md-6 p-2"></app-bmw-button>
-                <app-bmw-button [buttonData]="this.buttonTwo"class="col-md-6 p-2"> </app-bmw-button>
+                <app-bmw-button [buttonData]="this.buttonTwo" class="col-md-6 p-2"> </app-bmw-button>
             </div>
         </div>
     </div>
