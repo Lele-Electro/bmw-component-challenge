@@ -46,14 +46,11 @@ export class VehicleDetailsComponentComponent implements OnInit {
     }
   }
 
-  returnModel(){
+  returnModelImage(){
     const fileFolder = '../../../assets/images/models/';
     const fileExtension = '.png';
     const imageName = this.vehicle.modelName.replace(/\s/g, '').toLocaleLowerCase();
-
-    return `background-image: url( ${fileFolder + imageName + fileExtension}) `
-
-    // "background-image: url('../../../assets/images/models/bmw220i.png') ;"
+    return `background-image: url( ${fileFolder + imageName + fileExtension})`
     return
   }
 

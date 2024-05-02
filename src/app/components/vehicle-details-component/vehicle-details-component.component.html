@@ -1,17 +1,11 @@
 <div class="vehicle-component-container">
     <div class="row vehicle-compon">
-        <div class="component-left col-md-7 p-0">
+        <div class="component-left col-md-7 ">
             <div class="left-top-half">
-                <!-- <img [src]="returnModelImageFilePath()" > -->
-
                 <app-interior-exterior-button></app-interior-exterior-button>
-                <!-- <div class="user-options">
-
-                    <span> <img src="/assets/icons/car-front_rg.svg"></span>
-                    <span> <img src="/assets/icons/seat-side_rg.svg"></span>
-
-                </div> -->
-                <div class="image-container" [style]="returnModel()"></div>
+                <div class="image-container" [style]="returnModelImage()">
+                <!-- <h5>No Preview Available</h5> -->
+                </div>
 
             </div>
             <div class="left-bottom-half">
