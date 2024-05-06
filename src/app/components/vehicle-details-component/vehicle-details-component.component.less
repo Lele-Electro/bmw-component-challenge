@@ -12,7 +12,7 @@
 
 .component-left {
     display: grid;
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: 65% 25%;
     overflow: hidden;
 
 }
@@ -68,12 +68,7 @@
 .image-container::after {
 
     content: '';
-    // display: block;
     position: absolute;
-    // top: 0;
-    // bottom: 0;
-    // left: 0;
-    // right: 0;
     z-index: -1;
     margin-top: -45px;
     background-color: @bmw-blue-2-disabled;
@@ -87,6 +82,7 @@ app-interior-exterior-button {
     right: 0;
     margin-right: 15px;
     margin-top: 15px;
+
 }
 
 .left-top-half {
@@ -110,15 +106,6 @@ app-interior-exterior-button {
         position: relative;
         align-self: end;
         justify-self: center;
-
-        // h5{
-        //     position: absolute;
-        //     display: block;
-        //     top: 45%;
-        //     left: 50%;
-        //     transform: translate(-50% , -50%);
-
-        // }
     }
 
 
@@ -185,24 +172,14 @@ app-interior-exterior-button {
     background-color: @bmw-grey-8;
     position: relative;
     z-index: -5;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 2fr 1fr;
+
     text-align: center;
+    width: 100%;
     height: 100%;
 
     .spec-block {
         padding: 10px;
         text-align: left;
-
-         p {
-
-            // padding: 0;
-            // font-family: bmwTypeNext_bold;
-            // text-align: left !important;
-            // margin-left: 10px;
-        }
-
 
         span{
             font-size: 14px;
@@ -219,6 +196,7 @@ app-interior-exterior-button {
         grid-row-end: 3;
 
         h3 {
+            margin-top: 40px;
             font-size: 18px !important;
         }
 
@@ -246,6 +224,13 @@ app-interior-exterior-button {
     }
 }
 
+.app-model-technical-spec{
+    display: block;
+    width: 100%;
+    position: relative;
+    // z-index: 10;
+}
+
 
 .component-right {
     // background-color: red;
@@ -255,13 +240,74 @@ app-interior-exterior-button {
 
 @media only screen and (max-width: 768px) {
 
+
+.component-left,
+.component-right {
+    height: 100%;
+
+}
+
+
+
+.component-left {
+    display: grid;
+    grid-template-rows:5fr 3fr;
+    overflow: hidden;
+
+
+}
+
+
+
+.left-top-half {
+    box-sizing: border-box;
+    // background-color: coral;
+    position: relative;
+    overflow: visible;
+    // display: grid;
+    height: 100%;
+    // z-index: -11;
+
+
+    .image-container {
+        // margin-top: 40px;
+        background-color: @bmw-grey-8;
+        // background-image: url('../../../assets/images/models/bmw220i.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-y: center;
+        background-position-x: center;
+        height: 100%;
+        width: 100%;
+        position: relative;
+        align-self: end;
+        justify-self: center;
+    }
+
+
+
+}
+
+.left-bottom-half{
+    // background-color: chartreuse;
+    height: 100%;
+    margin-top: 30px;
+}
+
+.more-spec-container{
+    // background-color: violet;
+    margin-top: 0px;
+
+}
+
+
     .vehicle-component-container {
         width: 100%
     }
 
     .component-left,
     .component-right {
-        height: fit-content;
+        height: 100%;
     }
 
 
@@ -272,33 +318,5 @@ app-interior-exterior-button {
 
 
 
-
-    .left-top-half {
-        box-sizing: border-box;
-        // width: 100%;
-        display: grid;
-        position: relative;
-        z-index: 2;
-        overflow: visible;
-
-        .image-container {
-            // margin-top: 40px;
-            background-color: @bmw-grey-8;
-            background-image: url('../../../assets/images/models/bmw220i.png');
-            background-size: 100%;
-            background-repeat: no-repeat;
-            background-position-y: center;
-            background-position-x: center;
-            height: 100%;
-            width: 100%;
-            position: relative;
-            align-self: end;
-            justify-self: center;
-        }
-
-
-
-
-    }
 
 }

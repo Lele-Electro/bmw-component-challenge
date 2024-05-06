@@ -6,6 +6,7 @@ import { button } from 'src/app/models/button-model';
 import { CurrencyPipe } from '@angular/common';
 import { CustomCurrencyPipe } from 'src/app/pipes/custom-currency.pipe';
 import { EmailQuoteIconComponent } from '../email-quote-icon/email-quote-icon.component';
+import { ModelTechnicalSpecComponent } from '../model-technical-spec/model-technical-spec.component';
 
 @Component({
   selector: 'app-vehicle-details-component',
@@ -17,7 +18,8 @@ import { EmailQuoteIconComponent } from '../email-quote-icon/email-quote-icon.co
     BmwButtonComponent,
     CurrencyPipe,
     CustomCurrencyPipe,
-    EmailQuoteIconComponent
+    EmailQuoteIconComponent,
+    ModelTechnicalSpecComponent
 
   ]
 })
