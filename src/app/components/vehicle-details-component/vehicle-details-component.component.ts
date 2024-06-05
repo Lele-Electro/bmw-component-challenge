@@ -3,7 +3,7 @@ import { bmwModel } from 'src/app/models/bmw-model';
 import { InteriorExteriorButtonComponent } from '../interior-exterior-button/interior-exterior-button.component';
 import { BmwButtonComponent } from '../bmw-button/bmw-button.component';
 import { button } from 'src/app/models/button-model';
-import { CurrencyPipe } from '@angular/common';
+import { CurrencyPipe, NgClass } from '@angular/common';
 import { CustomCurrencyPipe } from 'src/app/pipes/custom-currency.pipe';
 import { EmailQuoteIconComponent } from '../email-quote-icon/email-quote-icon.component';
 import { ModelTechnicalSpecComponent } from '../model-technical-spec/model-technical-spec.component';
@@ -13,13 +13,14 @@ import { ModelTechnicalSpecComponent } from '../model-technical-spec/model-techn
   templateUrl: './vehicle-details-component.component.html',
   styleUrls: ['./vehicle-details-component.component.less'],
   standalone: true,
-  imports : [
+  imports: [
     InteriorExteriorButtonComponent,
     BmwButtonComponent,
     CurrencyPipe,
     CustomCurrencyPipe,
     EmailQuoteIconComponent,
-    ModelTechnicalSpecComponent
+    ModelTechnicalSpecComponent,
+    NgClass
 
   ]
 })
@@ -30,13 +31,13 @@ export class VehicleDetailsComponentComponent implements OnInit {
 
   }
 
-@Input() vehicle! : bmwModel;
+  @Input() vehicle!: bmwModel;
   buttonOne!: button
   buttonTwo!: button
-  constructor() {}
-  instantiateComponentsButtons(){
+  constructor() { }
+  instantiateComponentsButtons() {
     this.buttonOne = {
-      icon: {iconType: 'add'},
+      icon: { iconType: 'add' },
       text: 'Compare',
       type: 'standard',
     }
@@ -48,12 +49,12 @@ export class VehicleDetailsComponentComponent implements OnInit {
     }
   }
 
-  returnModelImage(){
+  returnModelImage() {
     const fileFolder = '../../../assets/images/models/';
     const fileExtension = '.png';
     const imageName = this.vehicle.modelName.replace(/\s/g, '').toLocaleLowerCase();
     return `background-image: url( ${fileFolder + imageName + fileExtension})`
-    return
+
   }
 
 }

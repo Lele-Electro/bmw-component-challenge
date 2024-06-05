@@ -11,23 +11,23 @@ export interface VehicleDetails {
   list: bmwModel[]
 }
 export interface bmwModel {
-    modelName: string
-    BodyType: string
-    NewDemo: string
-    FuelType: string
-    Transmition: string
-    pricing: Pricing
-    TechnicalSpecs: TechnicalSpecs
-  }
-  
-  export interface Pricing {
-    MonthlyInstallment: string
-    OfferPrce: string
-  }
-  
-  export interface TechnicalSpecs {
-    Zeroto100: string
-    EnginePerfomance: string
-    FuelConsumption: string
-  }
-  
+  modelName: string
+  BodyType: string
+  NewDemo: string
+  FuelType: string
+  Transmition: string
+  pricing: Pricing
+  TechnicalSpecs: TechnicalSpecs;
+  lovedByUser: boolean;
+}
+
+export interface Pricing {
+  MonthlyInstallment: string
+  OfferPrce: string
+}
+
+export interface TechnicalSpecs {
+  Zeroto100: string
+  EnginePerfomance: string
+  FuelConsumption: string
+}
